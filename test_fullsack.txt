@@ -1,0 +1,26 @@
+const magicFunction = () => { 
+    const inputString = "hfdawhuwwhcoomdd"; 
+    const VI_DIC = { 
+      aw: true, 
+      aa: true, 
+      dd: true, 
+      ee: true, 
+      oo: true, 
+      ow: true 
+    }; 
+ 
+    let res = 0; 
+    let currentChar = ""; 
+    let prevChar = ""; 
+ 
+    for (let char of inputString) { 
+      prevChar = currentChar; 
+      currentChar = char; 
+      if (VI_DIC[prevChar + currentChar]) { 
+        res++; 
+      } else if (currentChar === "w") { 
+        res++; 
+      } 
+    } 
+    console.log("ahaha dap an la: ", res); 
+  };
